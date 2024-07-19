@@ -370,7 +370,7 @@ textarea::placeholder {
   padding-top: 2px;
 }
 .navbar-toggler-icon {
-  background-image: url("/assest/img/menu.png") !important;
+  background-image: url("/assest/img/menu-icon.png") !important;
 }
 .hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
