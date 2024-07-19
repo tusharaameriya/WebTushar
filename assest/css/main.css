@@ -44,9 +44,23 @@ body {
   transition: 0.7s;
 }
 
-.nav-link:hover {
-  color: #149ddd !important;
+/* Default styling for the navbar */
+.navbar {
+  transition: 0.7s !important; /* Smooth transition for stickiness */
 }
+
+/* Sticky class for the navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #149ddd;
+
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Ensure there's enough padding on top of the body to avoid content overlap */
 
 .headind {
   font-size: 2.5rem;
@@ -320,14 +334,12 @@ textarea::placeholder {
   /* padding: 30px; */
 }
 .footer-bg {
-  background-color: rgba(72, 71, 71, 0.502) !important;
+  background-color: #149ddd !important;
 }
 .social-icon {
   transition: 0.7s;
 }
-.social-icon:hover {
-  color: #149ddd;
-}
+
 .form-btn {
   background-color: #149ddd !important;
   border: none;
@@ -340,14 +352,7 @@ textarea::placeholder {
   padding: 10px 50px 10px 50px;
   font-weight: 600;
 }
-@media only screen and (max-width: 450px) {
-  .responsive-footer-text {
-    font-size: 16px !important;
-  }
-  .social-icon {
-    font-size: 16px !important;
-  }
-}
+
 .scroll-arrow {
   position: fixed;
   height: 40px;
@@ -365,5 +370,27 @@ textarea::placeholder {
   padding-top: 2px;
 }
 .navbar-toggler-icon {
-  background-image: url("/assest/img/menu.png");
+  background-image: url("/assest/img/menu.png") !important;
+}
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #149dddc4;
+  cursor: pointer;
+}
+.navbar-toggler {
+  border: none !important;
+}
+
+/* Ensure the navbar sticks to the top and spans the full width */
+@media only screen and (max-width: 450px) {
+  .responsive-footer-text {
+    font-size: 16px !important;
+  }
+  .social-icon {
+    font-size: 16px !important;
+  }
 }
