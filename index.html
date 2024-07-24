@@ -99,7 +99,7 @@
               I am proficient in both frontend and backend development, specializing in creating end-to-end web applications. I have experience with HTML, CSS, JavaScript, and various backend technologies and frameworks. I am always eager to learn new technologies and apply them to my projects.
             </p>
             <div class="text-center text-lg-start">
-              <button class="btn btn-danger mt-4 resume-btn">My Resume</button>
+              <button class="btn btn-danger mt-4 resume-btn" id="downloadButton">My Resume</button>
             </div>
           </div>
           <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-zoom-in"  data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
@@ -597,6 +597,28 @@ document.getElementById('scrollArrow').addEventListener('click', function() {
     document.getElementById("content").style.display = "block";
   };
 });
+
+    </script>
+     <script>
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            var photoData = "assest/img/My Resume.png"; // Replace this with your base64 encoded image data
+            var fileName = "My Resume"; // Specify the filename for the downloaded photo
+
+            // Create an anchor element
+            var anchor = document.createElement('a');
+            anchor.href = photoData;
+            anchor.download = fileName;
+
+            // Programmatically trigger a click event on the anchor element
+            document.body.appendChild(anchor);
+            anchor.click();
+
+            // Clean up
+            document.body.removeChild(anchor);
+        });
+
+
+
 
     </script>
     
