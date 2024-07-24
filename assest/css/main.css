@@ -26,6 +26,31 @@ body {
   position: relative;
   z-index: 2;
 }
+.navbar-toggler-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-icon {
+  display: none;
+}
+
+.navbar-toggler.collapsed .close-icon {
+  display: none;
+}
+
+.navbar-toggler.collapsed .bi-list {
+  display: block;
+}
+
+.navbar-toggler:not(.collapsed) .bi-list {
+  display: none;
+}
+
+.navbar-toggler:not(.collapsed) .close-icon {
+  display: block;
+}
 
 .navbar {
   z-index: 3;
@@ -378,12 +403,67 @@ textarea::placeholder {
 
 .hover-effect:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px #149dddc4;
+  box-shadow: 0 4px 8px #149ddd;
   cursor: pointer;
 }
 .navbar-toggler {
   border: none !important;
 }
+#loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #149ddd; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#content {
+  display: none; /* Initially hide the content */
+}
+/* Total scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* For vertical scrollbars */
+    height: 8px; /* For horizontal scrollbars */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #149ddd;
+    border-radius: 10px;
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
 
 /* Ensure the navbar sticks to the top and spans the full width */
 @media only screen and (max-width: 450px) {
@@ -392,5 +472,8 @@ textarea::placeholder {
   }
   .social-icon {
     font-size: 16px !important;
+  }
+  .headind {
+    font-size: 30px;
   }
 }
