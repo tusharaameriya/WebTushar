@@ -237,6 +237,36 @@ p {
   border-left: 1px solid #149ddd;
   /* Pink border color */
 }
+.border-with-pink-div-left2 {
+  position: relative;
+  border-left: 1px solid #149ddd;
+  height: 250px;
+}
+.border-with-pink-div-left2::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #149ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-with-pink-div-left2::before::after {
+  content: "";
+  width: 10px;
+  /* Adjust width as needed */
+  height: 10px;
+  /* Adjust height as needed */
+  background-color: black;
+  /* Black color */
+  border-radius: 50%;
+  /* Rounded shape */
+}
 
 .border-with-pink-div-left::before {
   content: "";
@@ -444,26 +474,25 @@ textarea::placeholder {
 }
 /* Total scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* For vertical scrollbars */
-    height: 8px; /* For horizontal scrollbars */
+  width: 8px; /* For vertical scrollbars */
+  height: 8px; /* For horizontal scrollbars */
 }
 
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
-    background: black;
+  background: black;
 }
 
 /* Scrollbar handle */
 ::-webkit-scrollbar-thumb {
-    background: #149ddd;
-    border-radius: 10px;
+  background: #149ddd;
+  border-radius: 10px;
 }
 
 /* Scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: white;
+  background: white;
 }
-
 
 /* Ensure the navbar sticks to the top and spans the full width */
 @media only screen and (max-width: 450px) {
